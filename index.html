@@ -1,22 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Bazar Result</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live Result</title>
+
 <style>
 body{
+    background:#f5f5f5;
     margin:0;
-    padding:0;
+    font-family:Arial;
 }
-iframe{
-    width:100%;
-    height:100vh;
-    border:none;
+.box{
+    background:white;
+    border-top:3px solid red;
+    padding:15px;
+    margin:5px 0;
+}
+.name{
+    font-size:20px;
+    font-weight:bold;
+}
+.time{
+    color:#666;
+    font-size:14px;
+}
+.result{
+    float:right;
+    font-size:40px;
+    font-weight:bold;
 }
 </style>
 </head>
 <body>
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQBZCDddBSSFrPnx8hNWqYZOHJv667cU2FP_ngC4PdsjflNvskiZjvoehO_k7448ExK6qq9MkJoU5Kt/pubhtml"></iframe>
+<div id="result"></div>
+
+<script>
+const sheetURL =
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vQBZCDddBSSFrPnx8hNWqYZOHJv667cU2FP_ngC4PdsjfINvskiZjvoehO_k7448ExK6qq9MkJoU5Kt/pub?output=csv";
+
+fetch(sheetURL)
+.then(res => res.text())
+.then(data => {
+let rows = data.split("\n");
+let html = "";
+
+for(let i=1;i<rows.length;i++){
+let col = rows[i].split(",");
+
+html += `
+<div class="box">
+<div class="result">${col[3]}</div>
+<div class="name">${col[1]}</div>
+<div class="time">at ${col[2]}</div>
+</div>
+`;
+}
+
+document.getElementById("result").innerHTML = html;
+});
+</script>
 
 </body>
 </html>
