@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://s82802691-glitch.github.io/result-website/sitemap.xml
