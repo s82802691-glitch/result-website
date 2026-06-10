@@ -146,13 +146,21 @@ Call Now
 
 <div id="result"></div>
 
+<div id="result"></div>
+
 <script>
 
 const sheetURL="https://docs.google.com/spreadsheets/d/e/2PACX-1vQBZCDddBSSFrPnx8hNWqYZOHJv667cU2FP_ngC4PdsjfINvskiZjvoehO_k7448ExK6qq9MkJoU5Kt/pub?output=csv";
 
 fetch(sheetURL)
-...
-  </script>
+.then(res=>res.text())
+.then(data=>{
+
+// बाकी code...
+
+});
+
+</script>
 
 const sheetURL="https://docs.google.com/spreadsheets/d/e/2PACX-1vQBZCDddBSSFrPnx8hNWqYZOHJv667cU2FP_ngC4PdsjfINvskiZjvoehO_k7448ExK6qq9MkJoU5Kt/pub?output=csv";
 
