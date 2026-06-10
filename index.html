@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="USz9TnR0qYcFFHZdesKrAYKXBZHBXSiloTjuvVVJkiw" />
-  <title>Online Khaiwal Result</title>
-  <title>Online Khaiwal Result | Super Fast Result | Gold Star Result | Gold Star | Delhi Super Bazar | Royal Star</title>
+
+<title>Online Khaiwal Result | Super Fast Result | Gold Star Result | Delhi Super Bazar | Royal Star</title>
 
 <meta name="description" content="Daily Online Khaiwal Result, Super Fast Result, Gold Star Result, Gold Star, Delhi Super Bazar, Royal Star and latest updates.">
 
@@ -129,23 +129,27 @@ font-size:14px;
 
 <div class="phone">9649269875</div>
 
-<a class="btn whatsapp"
-href="https://wa.me/919649269875">
+<a class="btn whatsapp" href="https://wa.me/919649269875">
 WhatsApp
 </a>
 
-<a class="btn call"
-href="tel:9649269875">
+<a class="btn call" href="tel:9649269875">
 Call Now
 </a>
 
 </div>
-  <div class="live">
+
+<div class="live">
 🔥 SATTA KING SUPER FAST RESULTS 🔥
+<br>
+<span id="date1"></span>
+&nbsp;&nbsp;&nbsp;
+<span id="date2"></span>
 </div>
 
 <div id="result"></div>
-  
+<script>
+
 const sheetURL="https://docs.google.com/spreadsheets/d/e/2PACX-1vQBZCDddBSSFrPnx8hNWqYZOHJv667cU2FP_ngC4PdsjfINvskiZjvoehO_k7448ExK6qq9MkJoU5Kt/pub?output=csv";
 
 fetch(sheetURL)
@@ -153,6 +157,11 @@ fetch(sheetURL)
 .then(data=>{
 
 let rows=data.trim().split("\n");
+
+let header=rows[0].split(",");
+
+document.getElementById("date1").innerHTML=header[3];
+document.getElementById("date2").innerHTML=header[4];
 
 let topHTML="";
 let resultHTML="";
@@ -176,7 +185,13 @@ ${col[0]}
 </div>
 
 <div class="result">
+
+<div style="font-size:18px;color:red;">
+${header[3]} &nbsp;&nbsp; ${header[4]}
+</div>
+
 ${col[3]} &nbsp;&nbsp; ${col[4]}
+
 </div>
 
 <div class="name">
@@ -191,6 +206,8 @@ at ${col[2]}
 Record Chart
 </div>
 
+<div style="clear:both;"></div>
+
 </div>
 
 `;
@@ -198,15 +215,12 @@ Record Chart
 }
 
 document.getElementById("topMarkets").innerHTML=topHTML;
-
 document.getElementById("result").innerHTML=resultHTML;
 
 });
 
 </script>
 
-</body>
-</html>
 <div class="article">
 
 <h2>🌟 Royal Star Result Today</h2>
@@ -226,7 +240,6 @@ Royal Star के नंबरों का अध्ययन करके क�
 
 </div>
 
-
 <div class="article">
 
 <h2>⭐ Gold Star Result Today</h2>
@@ -245,7 +258,6 @@ Gold Star के पुराने रिकॉर्ड और रिजल्
 
 </div>
 
-
 <div class="article">
 
 <h2>🔥 Delhi Super Bazar Result Today</h2>
@@ -262,3 +274,6 @@ Delhi Super Bazar भारत के लोकप्रिय मार्क�
 </p>
 
 </div>
+
+</body>
+</html>
